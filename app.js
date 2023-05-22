@@ -82,3 +82,17 @@
 // В діапазоні годин 5-11 – має виводитися привітання “Доброго ранку”
 // В діапазоні годин 11-17 – має виводитися привітання “Доброго дня”
 // В діапазоні годин 17-23 – має виводитися привітання “Доброго вечора”.
+
+const todayDay = new Date();
+const dayTime = todayDay.getHours();
+if (dayTime > 23 && dayTime <= 5) {
+  console.log("Доброї ночі");
+} else if (dayTime > 5 && dayTime <= 11) {
+  console.log("Доброго ранку");
+} else if (dayTime > 11 && dayTime <= 17) {
+  console.log("Доброго дня");
+} else if (dayTime > 17 && dayTime <= 23) {
+  console.log("Доброго вечора”");
+} else {
+  console.log("errrooorrrrr");
+}
