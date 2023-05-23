@@ -67,12 +67,40 @@
 // Є масив [5, “Limit”, 12, “a”, “3”, 99, 2, [2, 4, 3, “33”, “a”, “text”], “strong”, “broun”]
 // Написати функцію яка виведе нові масиви які складаються із даних початкового масиву, але одного типу даних
 //(не приводити тип стрінг в число навіть якщо там лише число)
-// let  arr = [5, “Limit”, 12, “a”, “3”, 99, 2, [2, 4, 3, “33”, “a”, “text”], “strong”, “broun”];
+// let arr = [
+//   5,
+//   "Limit",
+//   12,
+//   "a",
+//   "3",
+//   99,
+//   2,
+//   [2, 4, 3, "33", "a", "text"],
+//   "strong",
+//   "broun",
+// ];
+// arr = arr.flat();
+
+// function funcName(arr) {
+//   const resultNumber = [];
+//   const resultString = [];
+//   const config = [resultNumber, resultString];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (typeof arr[i] === "number") {
+//       resultNumber.push(arr[i]);
+//     } else if (typeof arr[i] === "string") {
+//       resultString.push(arr[i]);
+//     }
+//   }
+//   return config;
+// }
+
 // let arrNew = funcName(arr);
+// console.log(arrNew);
 //  /*
 // [
 // [5, 12, 99, 2, 2, 4, 3],
-// [”Limit”, “a”, “3”, “33”, “a”, “text”, “strong”, “broun”
+// [”Limit”, “a”, “3”, “33”, “a”, “text”, “strong”, “broun”]
 // ]
 // */
 
