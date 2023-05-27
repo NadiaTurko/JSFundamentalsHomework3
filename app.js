@@ -46,52 +46,41 @@
 
 // function createArray(a, b) {
 //   const arr = [];
-//   if (a < b) {
+//   if (a <= 0 || b <= 0) {
+//     return "a , b data must not be negative";
+//   } else if (a === b) {
+//     return "The data is entered incorrectly";
+//   } else if (typeof a !== "number" || typeof b !== "number") {
+//     return "Type data is entered incorrectly";
+//   } else if (a < b) {
 //     for (let i = a; i <= b; i++) {
-//       for (let j = 1; j <= i; j++) {
+//       for (let j = a; j <= i; j++) {
 //         arr.push(i);
 //       }
 //     }
-//   } else if (a <= 0 && b <= 0) {
-//     return "a , b data must not be negative";
-//   } else if ((a = b)) {
-//     return "The data is entered incorrectly";
 //   }
 //   return arr;
 // }
-// console.log(createArray(2, 5));
-
-// function createArray(a, b) {
-//   const arr = [];
-//   if (a < b) {
-//     arr.map
-//       }
-//     }
-//     return arr;
-//   } else {
-//     return "The data is entered incorrectly";
-//   }
-// }
-// console.log(createArray(1, 5));
+// console.log(createArray(1, 10));
 
 // 4.
 // Напишіть функцію randArray(k), яка заповнюватиме масив k випадковими цілими числами.
-//Випадкові числа генеруються із діапазону 1-500.
-// randArray(5);  // [399,310,232,379,40]
-// function randArray(capacity) {
-//   const arr = [];
-//   for (let i = 0; i < capacity; i++) {
-//     let randomNum = Math.round(Math.random() * (500 - 1) + 500);
-//     arr.push(randomNum);
-//   }
-//   return arr;
-// }
-// console.log(randArray(5));
+// Випадкові числа генеруються із діапазону 1-500.
+randArray(5); // [399,310,232,379,40]
+function randArray(capacity) {
+  const arr = [];
+  for (let i = 0; i < capacity; i++) {
+    let randomNum = Math.floor(Math.random() * 500 + 1);
+    arr.push(randomNum);
+  }
+  return arr;
+}
+console.log(randArray(5));
 //узагальнення фнкція яка заповнюватиме масив k випадковими цілими числами із заданого діапазону
 // function randArray(capacity, min, max) {
 //   const arr = [];
 //   for (let i = 0; i < capacity; i++) {
-//     let randomNum = Math.round(Math.random() * (max - min) + max);
+//     let randomNum = Math.round(Math.random() * max+ min);
 //     arr.push(randomNum);
 //   }
 //   return arr;
@@ -131,14 +120,13 @@ console.log(arr);
 
 //2 спосіб через filter
 function funcName(arr) {
-  let resultNumber = [];
-  let resultString = [];
-  resultNumber = arr.filter(function (item) {
+  const resultNumber = arr.filter(function (item) {
     return typeof item === "number";
   });
-  resultString = arr.filter(function (item) {
+  const resultString = arr.filter(function (item) {
     return typeof item === "string";
   });
+
   const config = [resultNumber, resultString];
   return config;
 }
@@ -160,7 +148,7 @@ console.log(funcName(arr));
 
 // const todayDay = new Date();
 // const dayTime = todayDay.getHours();
-// if (dayTime > 23 && dayTime <= 5) {
+// if (dayTime > 23 || dayTime <= 5) {
 //   console.log("Доброї ночі");
 // } else if (dayTime > 5 && dayTime <= 11) {
 //   console.log("Доброго ранку");
